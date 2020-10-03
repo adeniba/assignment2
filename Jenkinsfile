@@ -8,6 +8,7 @@ pipeline {
             }
            
            steps {
+               sh 'PATH=$PATH:$HOME/terraform'
                sh 'terraform init' 
                sh 'terraform apply -auto-approve'
 
